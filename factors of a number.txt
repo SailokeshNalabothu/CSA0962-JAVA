@@ -1,0 +1,19 @@
+ class Factors {
+    public static int calculateFactors(int number) 
+{
+        int count = 0;
+        for (int i = 1; i <= Math.sqrt(number); i++) 
+{
+            if (number % i == 0) {
+                count += (i * i == number) ? 1 : 2;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String args[]) 
+{
+        int number = 36;
+        System.out.println("Number of factors of " + number + " is: " + calculateFactors(number));
+    }
+}
